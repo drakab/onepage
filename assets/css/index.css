@@ -1,0 +1,456 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding: 115px;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 10%;
+}
+@media (max-width: 1400px) {
+  .container {
+    margin: 0 5%;
+  }
+}
+
+.main {
+  padding-top: 50px;
+}
+
+.header {
+  padding: 30px 0;
+  box-shadow: 0 0 14px #4a4a4a;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .header {
+    padding: 20px 0;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav__list .nav__item {
+  padding: 0 15px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
+.section {
+  margin-top: 100px;
+}
+@media (max-width: 992px) {
+  .section {
+    margin-top: 65px;
+  }
+}
+.section.has-background-image {
+  background-image: url("../../assets/images/kobieta-na-wycieczce-z-mala-skrzynia.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 900px;
+}
+@media (max-width: 768px) {
+  .section.has-background-image {
+    min-height: auto;
+  }
+}
+.section__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 60px 0;
+}
+@media (max-width: 576px) {
+  .section__title {
+    margin: 30px 0;
+  }
+}
+.section__heading {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+.section__heading .heading-accent {
+  position: relative;
+}
+.section__heading .heading-accent::after {
+  content: "";
+  background: #DD2F2F;
+  position: absolute;
+}
+.section__heading .heading-accent::before {
+  content: "";
+  background: #DD2F2F;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .section__heading {
+    font-size: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .section__heading {
+    font-size: 24px;
+  }
+}
+.section:first-of-type .section__heading .heading-accent::after {
+  bottom: 3px;
+  margin-left: 8px;
+  height: 5px;
+  width: 60px;
+}
+@media (max-width: 576px) {
+  .section:first-of-type .section__heading .heading-accent::after {
+    width: 45px;
+  }
+}
+.section:nth-of-type(2) .section__heading .heading-accent::before {
+  bottom: 3px;
+  margin-right: 8px;
+  height: 5px;
+  width: 60px;
+  left: -65px;
+}
+@media (max-width: 576px) {
+  .section:nth-of-type(2) .section__heading .heading-accent::before {
+    width: 45px;
+    left: -55px;
+  }
+}
+.section:last-of-type .section__heading .heading-accent::before {
+  bottom: 5px;
+  height: 35px;
+  width: 5px;
+  left: -25px;
+}
+@media (max-width: 576px) {
+  .section:last-of-type .section__heading .heading-accent::before {
+    left: -20px;
+    height: 28px;
+  }
+}
+
+.section__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section__content--border {
+  border: 1px solid #D6DCE1;
+}
+.section__content.has-background-image {
+  background-image: url("../../assets/images/zolta-skrzynia.png");
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 992px) {
+  .section__content.has-background-image {
+    background-image: none;
+  }
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.info-cards__item {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .info-cards__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+.info-cards__item:nth-of-type(even) {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .info-cards__item:nth-of-type(even) {
+    justify-content: center;
+  }
+}
+.info-cards__item:nth-child(-n+2) {
+  margin-bottom: 90px;
+}
+@media (max-width: 992px) {
+  .info-cards__item:nth-child(-n+2) {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .info-cards__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+.info-cards__wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-cards__heading, .info-cards__description {
+  text-align: center;
+}
+
+.info-cards-add {
+  width: 33.33%;
+}
+@media (max-width: 992px) {
+  .info-cards-add {
+    width: 100%;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .info-cards-add {
+    width: 100%;
+    display: block;
+  }
+  .info-cards-add:nth-of-type(2) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.info-cards-add > div {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D6DCE1;
+  box-sizing: border-box;
+  background-color: #F9F9F9;
+}
+@media (max-width: 1400px) {
+  .info-cards-add > div {
+    height: 300px;
+  }
+}
+@media (max-width: 992px) {
+  .info-cards-add > div {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .info-cards-add > div {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .info-cards-add > div {
+    height: auto;
+  }
+}
+.info-cards-add__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.info-cards-add__description {
+  padding: 0 60px;
+}
+@media (max-width: 1400px) {
+  .info-cards-add__description {
+    padding: 0 30px;
+    margin: 0;
+  }
+}
+@media (max-width: 576px) {
+  .info-cards-add__description {
+    padding: 15px 30px;
+  }
+}
+
+.form {
+  max-width: 750px;
+  margin-top: 80px;
+}
+@media (max-width: 768px) {
+  .form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+.form__row {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .form__row {
+    flex-wrap: wrap;
+  }
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+.form__item--flex-row {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.form__item--flex-row .form__label {
+  display: block;
+  background-color: #F1F1F7;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+.form__item .form__label {
+  padding-bottom: 8px;
+}
+.form__item .form__input {
+  padding: 10px 13px;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+.form__item--half-left {
+  padding-right: 15px;
+}
+@media (max-width: 576px) {
+  .form__item--half-left {
+    padding-right: 0;
+  }
+}
+.form__item--half-right {
+  padding-left: 15px;
+}
+@media (max-width: 576px) {
+  .form__item--half-right {
+    padding-left: 0;
+  }
+}
+.form__submit {
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  border: 0;
+  background: #DD2F2F;
+  color: #fff;
+  padding: 9px 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.form__submit::after {
+  content: "⟶";
+  margin-left: 12px;
+  position: relative;
+  top: -1px;
+}
+
+.checkbox-label {
+  position: relative;
+  margin-left: 35px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: -35px;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background: #F3F3F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 10px;
+  width: 10px;
+  background-color: #DD2F2F;
+  display: none;
+  border-radius: 3px;
+}
+
+.checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+.error {
+  color: #DD2F2F;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 13px;
+}
+
+.invalid {
+  border-color: #DD2F2F !important;
+}
+
+.footer {
+  background-color: #676767;
+  padding: 20px 0;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+.footer__link {
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .footer__link {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+.footer__social {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 0;
+  top: -3px;
+}
+@media (max-width: 576px) {
+  .footer__social {
+    position: static;
+  }
+}/*# sourceMappingURL=index.css.map */
